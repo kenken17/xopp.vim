@@ -12,68 +12,68 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function s:Xopp(wordUnderCursor)
-    if wordUnderCursor ==# "true"
+    if a:wordUnderCursor ==# "true"
         exe 'normal! ciwfalse'
     endif
-    if wordUnderCursor ==# "false"
+    if a:wordUnderCursor ==# "false"
         exe 'normal! ciwtrue'
     endif
 
-    if wordUnderCursor ==# "write"
+    if a:wordUnderCursor ==# "write"
         exe 'normal! ciwread'
     endif
-    if wordUnderCursor ==# "read"
+    if a:wordUnderCursor ==# "read"
         exe 'normal! ciwwrite'
     endif
 
-    if wordUnderCursor ==# "get"
+    if a:wordUnderCursor ==# "get"
         exe 'normal! ciwpost'
     endif
-    if wordUnderCursor ==# "post"
+    if a:wordUnderCursor ==# "post"
         exe 'normal! ciwget'
     endif
 
-    if wordUnderCursor ==# "yes"
+    if a:wordUnderCursor ==# "yes"
         exe 'normal! ciwno'
     endif
-    if wordUnderCursor ==# "no"
+    if a:wordUnderCursor ==# "no"
         exe 'normal! ciwyes'
     endif
 
     " For CSS (mainly)
-    if wordUnderCursor ==# "left"
+    if a:wordUnderCursor ==# "left"
         exe 'normal! ciwright'
     endif
-    if wordUnderCursor ==# "right"
+    if a:wordUnderCursor ==# "right"
         exe 'normal! ciwleft'
     endif
 
-    if wordUnderCursor ==# "top"
+    if a:wordUnderCursor ==# "top"
         exe 'normal! ciwbottom'
     endif
-    if wordUnderCursor ==# "bottom"
+    if a:wordUnderCursor ==# "bottom"
         exe 'normal! ciwtop'
     endif
 
-    if wordUnderCursor ==# "height"
+    if a:wordUnderCursor ==# "height"
         exe 'normal! ciwwidth'
     endif
-    if wordUnderCursor ==# "width"
+    if a:wordUnderCursor ==# "width"
         exe 'normal! ciwheight'
     endif
 
-    if wordUnderCursor ==# "margin"
+    if a:wordUnderCursor ==# "margin"
         exe 'normal! ciwpadding'
     endif
-    if wordUnderCursor ==# "padding"
+    if a:wordUnderCursor ==# "padding"
         exe 'normal! ciwmargin'
     endif
 
     " For JS
-    if wordUnderCursor ==# "let"
+    if a:wordUnderCursor ==# "let"
         exe 'normal! ciwconst'
     endif
-    if wordUnderCursor ==# "const"
+    if a:wordUnderCursor ==# "const"
         exe 'normal! ciwlet'
     endif
 endfunction
