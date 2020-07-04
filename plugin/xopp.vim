@@ -11,13 +11,17 @@ let g:loaded_xopp = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+let s:dict = {
+  'true': 'false'
+  'false': 'true'
+}
+
 function s:Xopp(wordUnderCursor)
-    if a:wordUnderCursor ==# "true"
-        exe 'normal! ciwfalse'
-    endif
-    if a:wordUnderCursor ==# "false"
-        exe 'normal! ciwtrue'
-    endif
+  if has_key(s:dict, a:wordUnderCursor)
+    let s:itemToXopp = get(s:dict, wordUnderCursor, wordUnderCursor)
+
+    excute "normal! ciw" . s:itemToXopp
+  endif
 
     if a:wordUnderCursor ==# "write"
         exe 'normal! ciwread'
