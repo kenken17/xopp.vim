@@ -11,10 +11,10 @@ let g:loaded_xopp = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:dict = {\
-  'true': 'false'\
-  'false': 'true'\
-}
+let s:dict = {
+      \'true': 'false'
+      \'false': 'true'
+      \}
 
 function s:Xopp(wordUnderCursor)
   if has_key(s:dict, a:wordUnderCursor)
