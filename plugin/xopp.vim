@@ -20,7 +20,7 @@ function s:Xopp(wordUnderCursor)
   if has_key(s:dict, a:wordUnderCursor)
     let s:itemToXopp = get(s:dict, a:wordUnderCursor, a:wordUnderCursor)
 
-    excute "normal! ciw" . s:itemToXopp
+    execute "normal! ciw" . s:itemToXopp
   endif
 
     if a:wordUnderCursor ==# "write"
