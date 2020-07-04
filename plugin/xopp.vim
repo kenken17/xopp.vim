@@ -41,11 +41,11 @@ function s:Xopp(wordUnderCursor)
 endfunction
 
 if !hasmapto('<Plug>Xopp')
-  map <unique> <Leader>x <Plug>Xopp
+  nmap <unique> <Leader>x <Plug>Xopp
 endif
 
 noremap <unique> <script> <Plug>Xopp <SID>Xopp
-noremap <SID>Xopp :call <SID>Xopp(expand("<cword>"))<CR>
+noremap <silent> <SID>Xopp :call <SID>Xopp(expand("<cword>"))<CR>
 
 noremenu <script> Plugin.Add\ Correction <SID>Xopp
 
