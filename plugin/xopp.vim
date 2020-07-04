@@ -49,7 +49,7 @@ endif
 noremap <unique> <script> <Plug>Xopp <SID>Xopp
 noremap <silent> <SID>Xopp :call <SID>Xopp()<CR>
 
-noremenu <script> Plugin.Xopp\ Xopp <SID>Xopp
+noremenu <script> Plugin.Xopp <SID>Xopp
 
 if !exists(":Xopp")
   command -nargs=0 Xopp :call s:Xopp()
