@@ -47,7 +47,7 @@ endif
 noremap <unique> <script> <Plug>Xopp <SID>Xopp
 noremap <silent> <SID>Xopp :call <SID>Xopp(expand("<cword>"))<CR>
 
-noremenu <script> Plugin.Add\ Correction <SID>Xopp
+noremenu <script> Plugin.Xopp\ Xopp <SID>Xopp
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
