@@ -14,6 +14,22 @@ set cpo&vim
 let s:dict = {
       \'true': 'false',
       \'false': 'true',
+      \'read': 'write',
+      \'write': 'read',
+      \'get': 'post',
+      \'post': 'get',
+      \'yes': 'no',
+      \'no': 'yes',
+      \'left': 'right',
+      \'right': 'left',
+      \'top': 'bottom',
+      \'bottom': 'top',
+      \'height': 'width',
+      \'width': 'height',
+      \'margin': 'padding',
+      \'padding': 'margin',
+      \'let': 'const',
+      \'const': 'let',
       \}
 
 function s:Xopp(wordUnderCursor)
@@ -22,64 +38,6 @@ function s:Xopp(wordUnderCursor)
 
     execute "normal! ciw" . s:itemToXopp
   endif
-
-    if a:wordUnderCursor ==# "write"
-        exe 'normal! ciwread'
-    endif
-    if a:wordUnderCursor ==# "read"
-        exe 'normal! ciwwrite'
-    endif
-
-    if a:wordUnderCursor ==# "get"
-        exe 'normal! ciwpost'
-    endif
-    if a:wordUnderCursor ==# "post"
-        exe 'normal! ciwget'
-    endif
-
-    if a:wordUnderCursor ==# "yes"
-        exe 'normal! ciwno'
-    endif
-    if a:wordUnderCursor ==# "no"
-        exe 'normal! ciwyes'
-    endif
-
-    " For CSS (mainly)
-    if a:wordUnderCursor ==# "left"
-        exe 'normal! ciwright'
-    endif
-    if a:wordUnderCursor ==# "right"
-        exe 'normal! ciwleft'
-    endif
-
-    if a:wordUnderCursor ==# "top"
-        exe 'normal! ciwbottom'
-    endif
-    if a:wordUnderCursor ==# "bottom"
-        exe 'normal! ciwtop'
-    endif
-
-    if a:wordUnderCursor ==# "height"
-        exe 'normal! ciwwidth'
-    endif
-    if a:wordUnderCursor ==# "width"
-        exe 'normal! ciwheight'
-    endif
-
-    if a:wordUnderCursor ==# "margin"
-        exe 'normal! ciwpadding'
-    endif
-    if a:wordUnderCursor ==# "padding"
-        exe 'normal! ciwmargin'
-    endif
-
-    " For JS
-    if a:wordUnderCursor ==# "let"
-        exe 'normal! ciwconst'
-    endif
-    if a:wordUnderCursor ==# "const"
-        exe 'normal! ciwlet'
-    endif
 endfunction
 
 if !hasmapto('<Plug>Xopp')
