@@ -35,7 +35,7 @@ let s:dict = {
 function s:Xopp()
   let s:wordUnderCursor = expand("<cword>") 
 
-  if has_key(s:dict, a:wordUnderCursor)
+  if has_key(s:dict, s:wordUnderCursor)
     let s:itemToXopp = get(s:dict, s:wordUnderCursor, s:wordUnderCursor)
 
     execute "normal! ciw" . s:itemToXopp
