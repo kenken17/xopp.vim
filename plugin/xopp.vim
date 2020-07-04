@@ -12,8 +12,8 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 let s:dict = {
-      \'true': 'false'
-      \'false': 'true'
+      \'true': 'false',
+      \'false': 'true',
       \}
 
 function s:Xopp(wordUnderCursor)
