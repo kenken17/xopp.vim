@@ -32,9 +32,11 @@ let s:dict = {
       \'const': 'let',
       \}
 
-function s:Xopp(wordUnderCursor)
+function s:Xopp()
+  let s:wordUnderCursor = expand("<cword>") 
+
   if has_key(s:dict, a:wordUnderCursor)
-    let s:itemToXopp = get(s:dict, a:wordUnderCursor, a:wordUnderCursor)
+    let s:itemToXopp = get(s:dict, s:wordUnderCursor, s:wordUnderCursor)
 
     execute "normal! ciw" . s:itemToXopp
   endif
@@ -45,9 +47,13 @@ if !hasmapto('<Plug>Xopp')
 endif
 
 noremap <unique> <script> <Plug>Xopp <SID>Xopp
-noremap <silent> <SID>Xopp :call <SID>Xopp(expand("<cword>"))<CR>
+noremap <silent> <SID>Xopp :call <SID>Xopp()<CR>
 
 noremenu <script> Plugin.Xopp\ Xopp <SID>Xopp
+
+if !exists(":Xopp")
+  command -nargs=0 Xopp :call s:Xopp()
+endif
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
