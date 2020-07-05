@@ -42,12 +42,18 @@ function s:Xopp()
   endif
 endfunction
 
-if !hasmapto('<Plug>Xopp')
-  nmap <unique> <Leader>x <Plug>Xopp
+if !exists('g:xopp_map_keys')
+    let g:xopp_map_keys = 1
 endif
 
-noremap <unique> <script> <Plug>Xopp <SID>Xopp
-noremap <silent> <SID>Xopp :call <SID>Xopp()<CR>
+if g:xopp_map_keys
+  if !hasmapto('<Plug>Xopp')
+    nnoremap <unique> <Leader>x <Plug>Xopp
+  endif
+endif
+
+nnoremap <unique> <script> <Plug>Xopp <SID>Xopp
+nnoremap <silent> <SID>Xopp :call <SID>Xopp()<CR>
 
 noremenu <script> Plugin.Xopp <SID>Xopp
 
