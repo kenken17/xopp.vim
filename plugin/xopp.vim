@@ -43,13 +43,11 @@ function s:Xopp()
 endfunction
 
 if !exists('g:xopp_map_keys')
-    let g:xopp_map_keys = 1
+  let g:xopp_map_keys = 1
 endif
 
 if g:xopp_map_keys
-  if !hasmapto('<Plug>Xopp')
-    nnoremap <unique> <Leader>x <Plug>Xopp
-  endif
+  nnoremap <unique> <Leader>x <Plug>Xopp
 endif
 
 nnoremap <unique> <script> <Plug>Xopp <SID>Xopp
