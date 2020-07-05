@@ -47,11 +47,11 @@ if !exists('g:xopp_map_keys')
 endif
 
 if g:xopp_map_keys
-  nnoremap <unique> <Leader>x <Plug>Xopp
+  noremap <unique> <Leader>x <Plug>Xopp
 endif
 
-nnoremap <unique> <script> <Plug>Xopp <SID>Xopp
-nnoremap <silent> <SID>Xopp :call <SID>Xopp()<CR>
+noremap <unique> <script> <Plug>Xopp <SID>Xopp
+noremap <silent> <SID>Xopp :call <SID>Xopp()<CR>
 
 noremenu <script> Plugin.Xopp <SID>Xopp
 
