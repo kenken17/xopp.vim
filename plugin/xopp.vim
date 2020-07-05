@@ -47,7 +47,7 @@ if !exists('g:xopp_map_keys')
 endif
 
 if g:xopp_map_keys
-  noremap <unique> <Leader>x <Plug>Xopp
+  nmap <unique> <Leader>x <Plug>Xopp
 endif
 
 noremap <unique> <script> <Plug>Xopp <SID>Xopp
