@@ -29,7 +29,7 @@ CONTENTS                                                       *xopp-contents*
 ==============================================================================
 1. Intro                                                          *xopp-intro*
 
-Xopp, sounds `swap`, a simple plugin for swapping two words. This has been on 
+Xopp, sounds "swap", a simple plugin for swapping two words. This has been on 
 my dotfiles/ folder for a long time for convenient. It's time to move out as a
 plugin and maintained by it own.
 
