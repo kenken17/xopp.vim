@@ -1,0 +1,79 @@
+*xopp.txt* Swap two words. Period.
+
+
+                           __  __                 
+                           \ \/ /___  _ __  _ __  
+                            \  // _ \| '_ \| '_ \ 
+                            /  \ (_) | |_) | |_) |
+                           /_/\_\___/| .__/| .__/ 
+                                     |_|   |_|    
+
+
+                              Reference Manual~
+
+
+==============================================================================
+CONTENTS                                                       *xopp-contents*
+
+    1.Intro.......................................................|xopp-intro|
+    2.Installation.........................................|xopp-installation|
+    3.Mappings.................................................|xopp-mappings|
+    4.Default Words...............................................|xopp-words|
+    5.License...................................................|xopp-license|
+
+==============================================================================
+1. Intro                                                          *xopp-intro*
+
+Xopp, sounds `swap`, a simple plugin for swapping two words. This has been on 
+my dotfiles/ folder for a long time for convenient. It's time to move out as a
+plugin and maintained by it own.
+
+Plugin under:
+
+    https://github.com/kenken17/xopp.vim
+
+==============================================================================
+2. Installation                                            *xopp-installation*
+
+Use any of your plugin managers should not be any issue. I am using vim-plug
+myself. So did not test on other. If there is issue on any other plugin
+managers, you can leave a message, I will try to look into it.
+
+>
+    Plug 'kenken17/xopp.vim'
+<
+
+==============================================================================
+3. Mappings                                                    *xopp-mappings*
+
+If you don't like the default mapping (only one actually), you can turn off:
+
+>
+    let g:xopp_map_keys=0
+
+    " Default mapping
+    map <Leader>x :Xopp<Cr>
+<
+
+==============================================================================
+4. Default Words                                                  *xopp-words*
+
+Currently, only below are able to swap. User defined word will be added in the
+future. When I have more free time and know how to to do. ;p
+
+>
+    'true' <> 'false'
+    'read' <> 'write'
+    'get' <> 'post'
+    'yes' <> 'no'
+    'left' <> 'right'
+    'top' <> 'bottom'
+    'height' <> 'width'
+    'margin' <> 'padding'
+    'let' <> 'const'
+<
+
+==============================================================================
+5. License                                                      *xopp-license*
+
+MIT
