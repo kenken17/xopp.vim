@@ -30,6 +30,12 @@ let s:dict = {
       \'padding': 'margin',
       \'let': 'const',
       \'const': 'let',
+      \'after': 'before',
+      \'before': 'after',
+      \'=': '!',
+      \'!': '=',
+      \'>': '<',
+      \'<': '>',
       \}
 
 function s:Xopp()
